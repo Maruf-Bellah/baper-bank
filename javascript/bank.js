@@ -1,17 +1,32 @@
-document.getElementById("diposite-button").addEventListener("click", function () {
-    const innerText = document.getElementById("diposite-input");
-    const inputValue = innerText.value;
+document
+  .getElementById("diposite-button")
+  .addEventListener("click", function () {
+    const inputText = document.getElementById("diposite-input");
+    const inputValue = inputText.value;
+    const strTonNumInput = parseFloat(inputValue);
+
 
     const diposite = document.getElementById("diposite-total");
-    const dipositeTotal = diposite.innerText = inputValue;
+    const dipositeTotal = diposite.innerText;
+    const strTonNumDiposite = parseFloat(dipositeTotal);
+    const totalDisplay = strTonNumInput + strTonNumDiposite;
 
-     const stringToNumberDiposit = parseFloat(dipositeTotal);
-     const balance = document.getElementById("balance-total")
-     const balanceShow = balance.innerText
-     const stringToNumberBalanc = parseFloat(balanceShow);
-    
-     const total = stringToNumberBalanc + stringToNumberDiposit;
-     document.getElementById("balance-total").innerText = total;
-            
-        
+     document.getElementById('diposite-total').innerText = totalDisplay;
+
+    const balance = document.getElementById("balance-total");
+    const balanceShow = balance.innerText;
+    const stringToNumBalanc = parseFloat(balanceShow);
+  
+    const totalBalance =totalDisplay + stringToNumBalanc;
+    console.log(totalBalance);
+
+    document.getElementById("balance-total").innerText = totalBalance;
+  });
+
+document
+  .getElementById("withdraw-button")
+  .addEventListener("click", function () {
+    const inputWithdraw = document.getElementById("withdraw-input");
+    const window = inputWithdraw.value;
+    console.log(window);
   });
