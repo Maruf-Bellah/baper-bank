@@ -8,10 +8,12 @@ document.getElementById('button-submit').addEventListener('click', function(){
           const userPassword = passordFild.value;
           
 
-          if(userEmail == 'maruf@email' && userPassword == 'secret'){
+          if(userEmail === 'maruf@gmail' && userPassword === 'maruf'){
                window.location.href='banking.html';
           }
           else{
                console.log('you are wrong');
           }
 })
+
+// alert('hello bro')
